@@ -1,0 +1,41 @@
+{
+    "directories": {
+        "output": "release/"
+    },
+    "files": [
+        {
+            "from": "./",
+            "to": "./",
+            "filter": [
+                "package.json",
+                "package-lock.json"
+            ]
+        },
+        {
+            "from": "./dist",
+            "to": "./dist",
+            "filter": [
+                "**/*",
+                "!**/*.ts",
+                "!*.map",
+                "!*.d.ts",
+                "!**/.DS_Store"
+            ]
+        }
+    ],
+    "win": {
+        "target": [
+            "portable"
+        ]
+    },
+    "mac": {
+        "target": [
+            "dmg"
+        ]
+    },
+    "linux": {
+        "target": [
+            "AppImage"
+        ]
+    }
+}
