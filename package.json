@@ -12,7 +12,7 @@
         "build:electron": "npm --prefix ./electron run webpack",
         "release": "npm run build && electron-builder --project ./electron",
         "clean": "rm -rf ./dist && rm -rf ./electron/dist && rm -rf ./electron/release",
-        "postinstall": "electron-builder install-app-deps --project ./electron"
+        "postinstall": "npm --prefix ./electron install"
     },
     "dependencies": {
         "@angular/animations": "~13.1.0",
