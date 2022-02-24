@@ -4,22 +4,24 @@
     },
     "files": [
         {
-            "from": "./",
+            "from": ".",
             "to": "./",
             "filter": [
-                "package.json",
-                "package-lock.json"
+                "package.json"
             ]
         },
         {
             "from": "./dist",
             "to": "./dist",
             "filter": [
-                "**/*",
-                "!**/*.ts",
-                "!*.map",
-                "!*.d.ts",
-                "!**/.DS_Store"
+                "**/*.js"
+            ]
+        },
+        {
+            "from": "../dist/plex-collections-ui",
+            "to": "./dist",
+            "filter": [
+                "**/*"
             ]
         }
     ],
@@ -30,7 +32,7 @@
     },
     "mac": {
         "target": [
-            "dmg"
+            "dir"
         ]
     },
     "linux": {

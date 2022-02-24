@@ -1,28 +1,28 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # Compiled output
-/dist
-/tmp
-/out-tsc
-/bazel-out
-/release
+**/dist
+**/tmp
+**/out-tsc
+**/bazel-out
+**/release
 
 # Node
-/node_modules
+**/node_modules
 npm-debug.log
 yarn-error.log
 
 # IDEs and editors
-.idea/
+**/.idea/
 .project
 .classpath
 .c9/
 *.launch
-.settings/
+**/.settings/
 *.sublime-workspace
 
 # Visual Studio Code
-.vscode/*
+**/.vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
@@ -30,13 +30,13 @@ yarn-error.log
 .history/*
 
 # Miscellaneous
-/.angular/cache
+**/.angular/cache
 .sass-cache/
-/connect.lock
-/coverage
-/libpeerconnection.log
+**/connect.lock
+**/coverage
+**/libpeerconnection.log
 testem.log
-/typings
+**/typings
 
 # System files
 .DS_Store
