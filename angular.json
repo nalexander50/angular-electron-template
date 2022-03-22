@@ -6,7 +6,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "plex-collections-ui": {
+        "angular-electron-template": {
             "projectType": "application",
             "schematics": {
                 "@schematics/angular:component": {
@@ -23,7 +23,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/plex-collections-ui",
+                        "outputPath": "dist/angular-electron-template",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": "src/polyfills.ts",
@@ -40,6 +40,18 @@
                     },
                     "configurations": {
                         "production": {
+                            "index": {
+                                "input": "src/index.prod.html",
+                                "output": "index.html"
+                            },
+                            "optimization": {
+                                "scripts": true,
+                                "styles": {
+                                    "minify": true,
+                                    "inlineCritical": false
+                                },
+                                "fonts": true
+                            },
                             "budgets": [
                                 {
                                     "type": "initial",
@@ -75,10 +87,10 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "browserTarget": "plex-collections-ui:build:production"
+                            "browserTarget": "angular-electron-template:build:production"
                         },
                         "development": {
-                            "browserTarget": "plex-collections-ui:build:development"
+                            "browserTarget": "angular-electron-template:build:development"
                         }
                     },
                     "defaultConfiguration": "development"
@@ -86,7 +98,7 @@
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "plex-collections-ui:build"
+                        "browserTarget": "angular-electron-template:build"
                     }
                 },
                 "test": {
@@ -110,5 +122,5 @@
             }
         }
     },
-    "defaultProject": "plex-collections-ui"
+    "defaultProject": "angular-electron-template"
 }

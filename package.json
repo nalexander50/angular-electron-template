@@ -1,5 +1,6 @@
 {
-    "name": "plex-collections-ui",
+    "name": "angular-electron-template",
+    "productName": "Angular Electron Template",
     "version": "1.0.0",
     "scripts": {
         "asar": "asar",
@@ -7,7 +8,7 @@
         "electron:dev": "wait-on tcp:4200 && npm run build:electron && cross-env ENV=development electron ./electron",
         "start": "npm-run-all --parallel ng:serve electron:dev",
         "start:prod": "npm run build && electron ./electron",
-        "build": "npm-run-all build:ng build:electron",
+        "build": "npm run build:ng && npm run build:electron",
         "build:ng": "ng build --base-href ./",
         "build:electron": "npm --prefix ./electron run webpack",
         "release": "npm run build && electron-builder --project ./electron",

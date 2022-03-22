@@ -18,7 +18,7 @@
             ]
         },
         {
-            "from": "../dist/plex-collections-ui",
+            "from": "../dist/angular-electron-template",
             "to": "./dist",
             "filter": [
                 "**/*"

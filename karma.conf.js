@@ -25,7 +25,7 @@ module.exports = function (config) {
             suppressAll: true // removes the duplicated traces
         },
         coverageReporter: {
-            dir: require('path').join(__dirname, './coverage/plex-collections-ui'),
+            dir: require('path').join(__dirname, './coverage/angular-electron-template'),
             subdir: '.',
             reporters: [
                 { type: 'html' },
