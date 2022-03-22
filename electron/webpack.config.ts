@@ -1,5 +1,5 @@
-import { Configuration } from "webpack";
-import * as path from "path";
+import { Configuration } from 'webpack';
+import * as path from 'path';
 
 const isDevelopment = process.env.ENV === 'development';
 
@@ -10,7 +10,7 @@ const config: Configuration[] = [
         entry: path.join(__dirname, 'src', 'main', 'app-main.ts'),
         target: 'electron-main',
         resolve: {
-            extensions: [".tsx", ".ts", ".js"],
+            extensions: ['.tsx', '.ts', '.js'],
         },
         module: {
             rules: [{
@@ -34,7 +34,7 @@ const config: Configuration[] = [
         entry: path.join(__dirname, 'src', 'preload', 'preload.ts'),
         target: 'electron-preload',
         resolve: {
-            extensions: [".tsx", ".ts", ".js"],
+            extensions: ['.tsx', '.ts', '.js'],
         },
         module: {
             rules: [{

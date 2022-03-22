@@ -1,3 +1,5 @@
+import { shell } from 'electron';
+
 const isMac = process.platform === 'darwin';
 
 export function createDefaultTemplate(appName: string, isDevelopment: boolean) {
@@ -87,8 +89,7 @@ export function createDefaultTemplate(appName: string, isDevelopment: boolean) {
                 {
                     label: 'Learn More',
                     click: async () => {
-                        const { shell } = require('electron')
-                        await shell.openExternal('https://electronjs.org')
+                        await shell.openExternal('https://electronjs.org');
                     }
                 }
             ]
